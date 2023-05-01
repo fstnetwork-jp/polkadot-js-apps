@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
-# Copyright 2017-2023 @polkadot/apps authors & contributors
-# This software may be modified and distributed under the terms
-# of the Apache-2.0 license. See the LICENSE file for details.
-
-# fail fast on any non-zero exits
 set -e
 
-# the docker image name and dockerhub repo
-NAME="polkadot-js-apps"
-REPO="jacogr"
+pushd .
+
+# The following line ensure we run from the project root
+PROJECT_ROOT=`git rev-parse --show-toplevel`
+cd $PROJECT_ROOT
 
 # extract the current npm version from package.json
 VERSION=$(cat package.json \
@@ -17,17 +14,16 @@ VERSION=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g' \
   | sed 's/ //g')
+GITUSER=886360478228.dkr.ecr.us-west-2.amazonaws.com
+GITREPO=polkadot-js-apps
 
-echo "*** Building $NAME"
-docker build -t $NAME -f docker/Dockerfile .
+# Build the image
+echo "Building ${GITUSER}/${GITREPO}:latest docker image, hang on!"
+time docker build -f ./docker/Dockerfile -t ${GITUSER}/${GITREPO}:latest .
+docker tag ${GITUSER}/${GITREPO}:latest ${GITUSER}/${GITREPO}:v${VERSION}
 
-docker login -u $REPO -p $DOCKER_PASS
+# Show the list of available images for this repo
+echo "Image is ready"
+docker images | grep ${GITREPO}
 
-echo "*** Tagging $REPO/$NAME"
-if [[ $VERSION != *"beta"* ]]; then
-  docker tag $NAME $REPO/$NAME:$VERSION
-fi
-docker tag $NAME $REPO/$NAME
-
-echo "*** Publishing $NAME"
-docker push $REPO/$NAME
+popd
