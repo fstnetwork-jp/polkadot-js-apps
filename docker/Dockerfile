@@ -19,8 +19,15 @@ RUN yarn && NODE_ENV=production yarn build:www
 # ===========================================================
 FROM nginx:stable-alpine
 
+LABEL description="Container image for THXNET." \
+    io.thxnet.image.type="final" \
+    io.thxnet.image.authors="contact@thxlab.io" \
+    io.thxnet.image.vendor="thxlab.io" \
+    io.thxnet.image.description="THXNET.: Blockchain Panel" \
+    org.opencontainers.image.source="https://github.com/thxnet/blockchain-panel"
+
 # The following is mainly for doc purpose to show which ENV is supported
-ENV WS_URL=
+ENV WS_URL=wss://node.thx.thxnet.org/archive-001/ws
 
 WORKDIR /usr/share/nginx/html
 

@@ -6,6 +6,7 @@
   "Initializing connection": "Initializing connection",
   "Network": "Network",
   "Relay chain": "Relay chain",
+  "Rootchain": "Rootchain",
   "Settings": "Settings",
   "Switch": "Switch",
   "Waiting for authorization from the extension. Please open the installed extension and approve or reject access.": "Waiting for authorization from the extension. Please open the installed extension and approve or reject access.",
@@ -16,10 +17,14 @@
   "You are not connected to a node. Ensure that your node is running and that the Websocket endpoint is reachable.": "You are not connected to a node. Ensure that your node is running and that the Websocket endpoint is reachable.",
   "custom endpoint": "custom endpoint",
   "nav.github": "nav.github",
+  "nav.whitepaper": "nav.whitepaper",
   "nav.wiki": "nav.wiki",
   "transfer received": "transfer received",
   "update on #{{index}}": "update on #{{index}}",
+  "{{name}} Rootchain": "{{name}} Rootchain",
   "{{relay}} Common": "{{relay}} Common",
+  "{{relay}} Leafchain": "{{relay}} Leafchain",
   "{{relay}} Parachain": "{{relay}} Parachain",
-  "{{relay}} System": "{{relay}} System"
+  "{{relay}} System": "{{relay}} System",
+  "{{relay}} System Leafchain": "{{relay}} System Leafchain"
 }
