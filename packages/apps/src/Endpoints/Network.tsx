@@ -58,8 +58,8 @@ function NetworkDisplay ({ apiUrl, className = '', setApiUrl, value: { isChild, 
               {isRelay
                 ? t<string>('Rootchain')
                 : paraId && paraId < 2000
-                    ? t<string>('{{relay}} System Leafchain', { replace: { relay } })
-                    : t<string>('{{relay}} Leafchain', { replace: { relay } })
+                  ? t<string>('{{relay}} System Leafchain', { replace: { relay } })
+                  : t<string>('{{relay}} Leafchain', { replace: { relay } })
               }
             </div>
           )}

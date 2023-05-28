@@ -35,6 +35,6 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       ui: {},
       value: ''
     },
-    ...expandEndpoints(t, [testRelayThx], firstOnly, withSort),
+    ...expandEndpoints(t, [testRelayThx], firstOnly, withSort)
   ].filter(({ isDisabled }) => !isDisabled);
 }
