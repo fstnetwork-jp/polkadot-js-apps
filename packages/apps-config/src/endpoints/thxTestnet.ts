@@ -3,7 +3,7 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsThxAethPNG, chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG } from '../ui/logos/chains/index.js';
+import { chainsThxAethPNG, chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxIzutsuyaPNG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -42,19 +42,19 @@ export const testParasThxCommon: EndpointOption[] = [
       logo: chainsThxW3wPNG
     }
   },
-  {
-    info: 'testTxd',
-    paraId: 1002,
-    providers: {
-      'THXNET.': 'wss://node.txd.testnet.thxnet.org/archive-001/ws'
-    },
-    teleport: [-1],
-    text: 'TXD Testnet',
-    ui: {
-      color: '#333F4F',
-      logo: chainsThxThxnetPNG
-    }
-  },
+  // {
+  //   info: 'testTxd',
+  //   paraId: 1002,
+  //   providers: {
+  //     'THXNET.': 'wss://node.txd.testnet.thxnet.org/archive-001/ws'
+  //   },
+  //   teleport: [-1],
+  //   text: 'TXD Testnet',
+  //   ui: {
+  //     color: '#333F4F',
+  //     logo: chainsThxThxnetPNG
+  //   }
+  // },
   {
     info: 'sand',
     paraId: 1003,
@@ -79,6 +79,19 @@ export const testParasThxCommon: EndpointOption[] = [
     ui: {
       color: '#333F4F',
       logo: chainsThxAethPNG
+    }
+  },
+  {
+    info: 'testIzutsuya',
+    paraId: 1005,
+    providers: {
+      'THXNET.': 'wss://node.izutsuya.testnet.thxnet.org/archive-001/ws'
+    },
+    teleport: [-1],
+    text: 'IZUTSUYA Testnet',
+    ui: {
+      color: '#333F4F',
+      logo: chainsThxIzutsuyaPNG
     }
   }
 ];
