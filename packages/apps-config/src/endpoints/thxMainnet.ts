@@ -3,7 +3,7 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG } from '../ui/logos/chains/index.js';
+import { chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxActivaPNG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -40,6 +40,19 @@ export const parasThxCommon: EndpointOption[] = [
     ui: {
       color: '#333F4F',
       logo: chainsThxW3wPNG
+    }
+  },
+  {
+    info: 'activa',
+    paraId: 1002,
+    providers: {
+      'THXNET.': 'wss://node.activa.mainnet.thxnet.org/archive-001/ws'
+    },
+    teleport: [-1],
+    text: 'Activa',
+    ui: { 
+      color: '#333F4F',
+      logo: chainsThxActivaPNG
     }
   }
 ];

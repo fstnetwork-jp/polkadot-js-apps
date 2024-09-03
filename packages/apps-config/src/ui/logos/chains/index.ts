@@ -58,6 +58,7 @@ export { chainsSpannerPNG } from './generated/spannerPNG.js';
 export { chainsStandardPNG } from './generated/standardPNG.js';
 export { chainsT0rnPNG } from './generated/t0rnPNG.js';
 export { chainsTanglePNG } from './generated/tanglePNG.js';
+export { chainsThxActivaPNG } from './generated/thx-activaPNG.js';
 export { chainsThxAethPNG } from './generated/thx-aethPNG.js';
 export { chainsThxIzutsuyaPNG } from './generated/thx-izutsuyaPNG.js';
 export { chainsThxSandPNG } from './generated/thx-sandPNG.js';
