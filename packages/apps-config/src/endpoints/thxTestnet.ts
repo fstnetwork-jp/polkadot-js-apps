@@ -3,7 +3,7 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsThxAethPNG, chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxIzutsuyaPNG } from '../ui/logos/chains/index.js';
+import { chainsThxAethPNG, chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxIzutsuyaPNG, chainsThxMbPNG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -92,6 +92,19 @@ export const testParasThxCommon: EndpointOption[] = [
     ui: {
       color: '#333F4F',
       logo: chainsThxIzutsuyaPNG
+    }
+  },
+  {
+    info: 'mirrored-body-test',
+    paraId: 1006,
+    providers: {
+      'THXNET.': 'wss://node.mirrored-body-test.testnet.thxnet.org/archive-001/ws'
+    },
+    teleport: [-1],
+    text: 'Mirrored Body Test',
+    ui: { 
+      color: '#333F4F',
+      logo: chainsThxMbPNG
     }
   }
 ];

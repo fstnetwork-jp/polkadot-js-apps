@@ -61,6 +61,8 @@ export { chainsTanglePNG } from './generated/tanglePNG.js';
 export { chainsThxActivaPNG } from './generated/thx-activaPNG.js';
 export { chainsThxAethPNG } from './generated/thx-aethPNG.js';
 export { chainsThxIzutsuyaPNG } from './generated/thx-izutsuyaPNG.js';
+export { chainsThxMbTmpPNG } from './generated/thx-mb-tmpPNG.js';
+export { chainsThxMbPNG } from './generated/thx-mbPNG.js';
 export { chainsThxSandPNG } from './generated/thx-sandPNG.js';
 export { chainsThxThxnetPNG } from './generated/thx-thxnetPNG.js';
 export { chainsThxThxPNG } from './generated/thx-thxPNG.js';
